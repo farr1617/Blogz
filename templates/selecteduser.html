@@ -1,10 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
-
-<h1 style="color:rgb(0, 255, 136)">Build a Blog</h1>
+<h1 style="color:blue">Blog posts!</h1>
 <hr />
 {% if posts|length == 0 %}
-    <p style="color:rgba(255, 166, 0, 0.061)">No new blogs, Please make one?</p>
+    <p>This person has yet to make a blog.</p>
 {% else %}
     {% for post in posts | reverse %}
     <h3><a href="/blog?id={{ post.id }}">{{ post.title }}</a></h3>

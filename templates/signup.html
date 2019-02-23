@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 style="color:blue">Signup:</h1>
+<form method="post">
+    <table>
+        <tr>
+        <label>
+            <td>Original Username:</td>
+            <td><input name="username" type="text"></td>
+        </label>
+        </tr>
+        <tr><td></td><td><p class="error">{{ username_error }}</p></td></tr>
+        <tr>
+            <label>
+                <td>Original Password:</td>
+                <td><input name="password" type="password"></td>
+            </label>
+        </tr>
+        <tr><td></td><td><p class="error">{{ password_error }}</p></td></tr>
+        <tr>
+            <label>
+                <td>Double Check Password!:</td>
+                <td><input name="verify" type="password"></td>
+           </label>
+        </tr>
+        <tr><td></td><td><p class="error">{{ verify_error }}</p></td></tr>
+    </table>
+    <input type="submit" value="Click to create account">
+</form>
+{% endblock %}

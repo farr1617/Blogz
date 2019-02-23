@@ -1,22 +1,23 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
     <head>
         <title>{{title}}</title>
-        <link rel="stylesheet" type="text/css" href="style.css">  
-    
-<body>
-     <nav>
-
-            <span>
-            <a href='/blogs'><h2>Main Blog Page!</h2></a>  
-            <a href='/newpost'><h2>New Post!</h2></a>   
-            </span>
-    
-        </nav>
-   
+         <style>
+            .error {
+                color: red;
+            }
+        </style>
     </head>
-    {% block content %}
-    {% endblock %}
-</body>
+
+    
+    <body>
+        <a href="/">Home</a> | <a href="/blog">All Posts</a> | <a href="/newpost">New Post</a> | <a href="/login">Login</a> | <a href="/logout">Logout</a><br /><br />
+
+        {% block content %}
+        {% endblock %}
+    </body>
+
 </html>
+
+  
 

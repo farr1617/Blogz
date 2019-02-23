@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 style="color:blue">Welcome Back, {{session.username}}. What is on your mind?</h1>
+<form method="post">
+    <table>
+        <tr>
+        <label>
+            <td>Give your new blog a title:</td>
+            <td><input name="title" type="text"></td>
+        </label>
+        </tr>
+        <tr><td></td><td><p class="error">{{ title_error }}</p></td></tr>
+        <tr>
+        <label>
+            <td>New blog:</td>
+            <td><textarea name="body"></textarea></td>
+        </label>
+        </tr>
+        <tr><td></td><td><p class="error">{{ body_error }}</p></td></tr>
+
+    </table>
+    <input type="submit" value="Click to add new blog">
+    
+</form>
+{% endblock %}
